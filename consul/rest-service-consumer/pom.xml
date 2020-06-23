@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.saltedfish</groupId>
-	<artifactId>rest-service</artifactId>
+	<artifactId>rest-service-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rest-service-consumer</name>
 	<description>Demo project for Spring Boot</description>
