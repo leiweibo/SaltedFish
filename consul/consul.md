@@ -104,3 +104,5 @@ $ curl -X PUT -d '{"id": "nginx","name": "nginx","address": "192.168.99.107","po
 ##docker-machine-driver-xhyve need root owner and uid
 > sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
 > sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+
+spring.active.profile=9003

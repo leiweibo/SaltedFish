@@ -9,5 +9,5 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient
 class RestServiceApplication
 
 fun main(args: Array<String>) {
-	runApplication<RestServiceApplication>(*args)
+	runApplication<RestServiceConsumerApplication>(*args)
 }
