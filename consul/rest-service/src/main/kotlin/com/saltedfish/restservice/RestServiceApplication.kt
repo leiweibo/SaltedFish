@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient
 
 @SpringBootApplication
 @EnableDiscoveryClient
-class RestServiceApplication
+class RestServiceConsumerApplication
 
 fun main(args: Array<String>) {
 	runApplication<RestServiceConsumerApplication>(*args)
