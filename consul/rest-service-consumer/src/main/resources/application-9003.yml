@@ -13,3 +13,9 @@ spring:
         register-health-check: true
         health-check-path: /check
         register: false
+feign:
+  client:
+    config:
+      server-provider:
+        requestInterceptors:
+          - com.saltedfish.restservice.config.AdminInterceptor
