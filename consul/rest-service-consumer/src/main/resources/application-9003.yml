@@ -19,6 +19,8 @@ feign:
       server-provider:
         requestInterceptors:
           - com.saltedfish.restservice.config.AdminInterceptor
+  hystrix:
+    enabled: true
 logging:
   level:
-    com.saltedfish.restservice.config.AdminInterceptor: debug
+    com.saltedfish.restservice.config.AdminInterceptor: trace
