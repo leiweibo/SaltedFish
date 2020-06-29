@@ -19,3 +19,6 @@ feign:
       server-provider:
         requestInterceptors:
           - com.saltedfish.restservice.config.AdminInterceptor
+logging:
+  level:
+    com.saltedfish.restservice.config.AdminInterceptor: debug
