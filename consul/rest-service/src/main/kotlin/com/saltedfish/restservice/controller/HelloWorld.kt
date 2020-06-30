@@ -24,6 +24,7 @@ class HelloWorld {
         result.success = true
         result.code = "200"
         result.msg = "HelloWrold."
+        loggr.debug("excuting, hell().")
         return result
     }
 }

@@ -10,7 +10,6 @@ import org.springframework.cloud.client.loadbalancer.LoadBalancerClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.client.RestTemplate
-import org.springframework.web.client.getForEntity
 import java.net.URI
 import java.util.stream.Collectors
 
@@ -24,7 +23,12 @@ class HelloWorldClient {
     @Autowired
     private val loadBalancerClient: LoadBalancerClient? = null
 
-    private val restTemplate: RestTemplate = RestTemplate()
+//    通过这种方式，可以通过 val instance: ServiceInstance = loadBalancerClient!!.choose(SERVER_ID)
+//    private val restTemplate: RestTemplate = RestTemplate()
+
+//  通过这种方式，
+    @Autowired
+    private lateinit var restTemplate: RestTemplate
 
     private val SERVER_ID = "server-provider"
 
@@ -48,10 +52,12 @@ class HelloWorldClient {
     // 通过loadBalance去获取
     @GetMapping("hello")
     fun hello(): String? {
-        val instance: ServiceInstance = loadBalancerClient!!.choose(SERVER_ID)
-        val url: String = instance.uri.toString().toString() + "/hello"
-        logger.info("remote server url：{}", url);
-        return restTemplate.getForObject(url, String::class.java)
+//        val instance: ServiceInstance = loadBalancerClient!!.choose(SERVER_ID)
+//        val url: String = instance.uri.toString().toString() + "/hello"
+//        logger.info("remote server url：{}", url);
+//        return restTemplate.getForObject(url, String::class.java)
+
+        return restTemplate.getForObject("http://server-provider/hello", String::class.java)
     }
 
     // 通过feign访问服务
