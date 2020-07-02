@@ -13,7 +13,9 @@ import org.springframework.web.client.RestTemplate
 import java.net.URI
 import java.util.stream.Collectors
 
-
+/**
+ * 初步实现 ribbon call
+ */
 @RestController
 class HelloWorldClient {
 
@@ -26,7 +28,8 @@ class HelloWorldClient {
 //    通过这种方式，可以通过 val instance: ServiceInstance = loadBalancerClient!!.choose(SERVER_ID)
 //    private val restTemplate: RestTemplate = RestTemplate()
 
-//  通过这种方式，
+    // 通过这种方式，这个template因为拥有loadbalance注解，所以可以在对应的 hello方法里面通过http:{server_id}的
+    // 方法来获取请求
     @Autowired
     private lateinit var restTemplate: RestTemplate
 
