@@ -38,4 +38,17 @@ class GetewayServiceImpl: GatewayService {
         future = AsyncResult<String>("Thread:${Thread.currentThread().name}, spent ${endTime - startTime}")
         return future
     }
+
+    @Async("myExecutor")
+    override fun getFuturedAlipayGateway2(userName: String) {
+        println("Get start the gateway service, userName: $userName, threadName: ${Thread.currentThread().name}")
+        val startTime = System.currentTimeMillis()
+        try {
+            Thread.sleep(5 * 1000);
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
+        }
+        var endTime = System.currentTimeMillis()
+        print("Thread: ${Thread.currentThread().name}, spent: ${endTime - startTime}")
+    }
 }
