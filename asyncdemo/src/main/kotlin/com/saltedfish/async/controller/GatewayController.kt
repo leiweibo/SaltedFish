@@ -22,4 +22,18 @@ class GatewayController {
         println("call gateway spent:${endTime - startTime} ms")
         return "call gateway spent: ${endTime - startTime} ms"
     }
+
+    @RequestMapping("/gateway2/{userName}")
+    fun gateWay2(@PathVariable userName:String):String {
+        val startTime = System.currentTimeMillis()
+        var future = gatewayService.getFuturedAlipayGateway(userName)
+        try {
+            Thread.sleep(5000)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        var endTime = System.currentTimeMillis()
+        println("call gateway spent for: ${endTime - startTime}")
+        return future.get()
+    }
 }
