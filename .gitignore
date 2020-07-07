@@ -2,3 +2,6 @@
 **/.DS_Store
 **/*.iml
 **/target/
+**/.classpath
+**/.settings/
+**/.project
