@@ -61,5 +61,10 @@ public class UserController {
     return new ResponseEntity<>(userInfo, HttpStatus.OK);
   }
 
+  @GetMapping("/testtt")
+  public String getTest() {
+    return "Test..";
+  }
+
   //TODO CRUD for user
 }

@@ -1,5 +1,3 @@
-##### COPY FROM https://github.com/maineffort/spring-petclinic-microservices-swagger, THANKS!!!
-
 # Distributed version of the Spring PetClinic Sample Application built with Spring Cloud - Swaggerized Version
 
 [![Build Status](https://travis-ci.org/spring-petclinic/spring-petclinic-microservices.svg?branch=master)](https://travis-ci.org/spring-petclinic/spring-petclinic-microservices/) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Dependency Status](https://www.versioneye.com/user/projects/58b2c56f9ceb450031272d6a/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58b2c56f9ceb450031272d6a)

@@ -1,0 +1,14 @@
+# Project exclude paths
+/credit-facility-service-app/target/
+/credit-facility-service-client/target/
+/credit-facility-service-controller/target/
+/credit-facility-service-domain/target/
+/credit-facility-service-infrastructure/target/
+/start/target/
+/.idea/
+/credit-facility-service-app/credit-facility-service-app.iml
+/credit-facility-service-controller/credit-facility-service-controller.iml
+/credit-facility-service-domain/credit-facility-service-domain.iml
+/credit-facility-service-infrastructure/credit-facility-service-infrastructure.iml
+/credit-facility-service.iml
+/start/start.iml
